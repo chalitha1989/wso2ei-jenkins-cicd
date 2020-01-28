@@ -16,6 +16,6 @@ jobs:
     - name: Build and Deploy with Maven
       run: |
        mvn clean install --file JenkinsCICDSample/pom.xml
-       cd HelloCompositeApp
+       ls HelloCompositeApp
 
       
