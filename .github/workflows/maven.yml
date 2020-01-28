@@ -16,6 +16,7 @@ jobs:
     - name: Build and Deploy with Maven
       run: |
        mvn clean install --file JenkinsCICDSample/pom.xml
-       ls
+       ls JenkinsCICDSample/HelloCompositeApp
+       ls JenkinsCICDSample/HelloESBProject/target
 
       
