@@ -6,7 +6,7 @@
                 <property name="XXXX" value="This is a test updated"/>
             </log>
             <payloadFactory description="Build a payload" media-type="json">
-                <format>{“message”:”Hello World”}</format>
+                <format>{“message”:”Hello all”}</format>
                 <args/>
             </payloadFactory>
             <respond description="Send response"/>
