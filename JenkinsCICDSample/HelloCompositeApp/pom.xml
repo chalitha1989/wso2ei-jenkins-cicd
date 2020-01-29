@@ -97,7 +97,7 @@
               <trustStorePath>${basedir}/src/main/resources/security/new-wso2carbon.jks</trustStorePath>
               <trustStorePassword>${env.TRUSTSTORE_PASS}</trustStorePassword>
               <trustStoreType>JKS</trustStoreType>
-              <serverUrl>${env.EI_URL}</serverUrl>
+              <serverUrl>${env.DEV_EI_URL}</serverUrl>
               <userName>${env.ADMIN_USER}</userName>
               <password>${env.ADMIN_PASSWORD}</password>               
               <operation>deploy</operation>
