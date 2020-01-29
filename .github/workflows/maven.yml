@@ -14,8 +14,16 @@ jobs:
       with:
         java-version: 1.8
     - name: Build and Deploy with Maven
+      env:
+        DEV_ENV: dev
+        DEV_EI_HOST: dev.ei.wso2.com
+        ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+        ADMIN_USER: ${{ secrets.ADMIN_USER }}
+        TRUSTSTORE_PASS: ${{ secrets.TRUSTSTORE_PASS }}
       run: |
-       mvn clean install --file JenkinsCICDSample/pom.xml
+       cd JenkinsCICDSample       
+       ls
+       mvn clean install --file pom.xml
        ls JenkinsCICDSample/HelloCompositeApp
        ls JenkinsCICDSample/HelloESBProject/target
 
