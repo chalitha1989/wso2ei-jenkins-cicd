@@ -95,11 +95,11 @@
           <carbonServers>
             <CarbonServer>
               <trustStorePath>${basedir}/src/main/resources/security/new-wso2carbon.jks</trustStorePath>
-              <trustStorePassword>wso2carbon</trustStorePassword>
+              <trustStorePassword>$TRUSTSTORE_PASS</trustStorePassword>
               <trustStoreType>JKS</trustStoreType>
               <serverUrl>https://localhost:9443</serverUrl>
-              <userName>admin</userName>
-              <password>admin</password>
+              <userName>$ADMIN_USER</userName>
+              <password>$ADMIN_PASSWORD</password>
               <operation>deploy</operation>
             </CarbonServer>
           </carbonServers>
