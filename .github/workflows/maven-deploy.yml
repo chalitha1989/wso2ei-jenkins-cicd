@@ -24,5 +24,6 @@ jobs:
        cd JenkinsCICDSample       
        ls
        mvn clean install --file pom.xml -DADMIN_PASSWORD=$ADMIN_PASSWORD -DADMIN_USER=$ADMIN_USER -DTRUSTSTORE_PASS=$TRUSTSTORE_PASS
+       cd HelloCompositeApp
+       mvn clean deploy -Dmaven.deploy.skip=true -Dmaven.car.deploy.skip=false
      
-      
