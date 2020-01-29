@@ -16,14 +16,14 @@ jobs:
     - name: Build and Deploy with Maven
       env:
         DEV_ENV: dev
-        DEV_EI_HOST: dev.ei.wso2.com
+        DEV_EI_URL: dev.ei.wso2.com
         ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
         ADMIN_USER: ${{ secrets.ADMIN_USER }}
         TRUSTSTORE_PASS: ${{ secrets.TRUSTSTORE_PASS }}
       run: |
        cd JenkinsCICDSample       
        ls
-       mvn clean install --file pom.xml -DADMIN_PASSWORD=$ADMIN_PASSWORD -DADMIN_USER=$ADMIN_USER -DTRUSTSTORE_PASS=$TRUSTSTORE_PASS
+       mvn clean install --file pom.xml -DADMIN_PASSWORD=$ADMIN_PASSWORD -DADMIN_USER=$ADMIN_USER -DTRUSTSTORE_PASS=$TRUSTSTORE_PASS -DDEV_EI_URL=$DEV_EI_URL
        cd HelloCompositeApp
        mvn clean deploy -Dmaven.deploy.skip=true -Dmaven.car.deploy.skip=false
      
