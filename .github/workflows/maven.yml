@@ -23,8 +23,6 @@ jobs:
       run: |
        cd JenkinsCICDSample       
        ls
-       mvn clean install --file pom.xml
-       ls JenkinsCICDSample/HelloCompositeApp
-       ls JenkinsCICDSample/HelloESBProject/target
-
+       mvn clean install --file pom.xml -DADMIN_PASSWORD=$ADMIN_PASSWORD -DADMIN_USER=$ADMIN_USER -DTRUSTSTORE_PASS=$TRUSTSTORE_PASS
+     
       
